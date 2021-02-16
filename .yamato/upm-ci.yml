@@ -37,6 +37,7 @@
     UTR_Output.zip:
       paths:
         - "upm-ci~/test-results/**/*"
+        - "Temp/docstest/**/*"
 {% endfor %}
 {% endfor %}
 

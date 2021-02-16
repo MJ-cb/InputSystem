@@ -459,7 +459,7 @@ class APIVerificationTests
         var inputSystemPackageInfo = UnityEditor.PackageManager.PackageInfo.FindForAssetPath("Packages/com.unity.inputsystem");
         var(buildLog, shortVersionId) = Documentation.Instance.Generate(inputSystemPackageInfo, InputSystem.version.ToString(), docsFolder);
         log = buildLog;
-        Debug.LogError($"XXX: path '{docsFolder}', pkginfo '{inputSystemPackageInfo}', version '{InputSystem.version.ToString()}', buildlog '{buildlog}', shortVersionId '{shortVersionId}'");
+        Debug.LogWarning($"XXX: path '{docsFolder}', pkginfo '{inputSystemPackageInfo}', version '{InputSystem.version.ToString()}', buildlog '{buildLog}', shortVersionId '{shortVersionId}'");
         return Path.Combine(docsFolder, shortVersionId);
     }
 
