@@ -1999,7 +1999,7 @@ partial class CoreTests
         Assert.That(tree["map/action"].children[0].displayName, Is.EqualTo("1D Axis"));
     }
 
-    #if UNITY_STANDALONE // CodeDom API not available in most players. We only build and run this in the editor but we're
+    #if false && UNITY_STANDALONE // CodeDom API not available in most players. We only build and run this in the editor but we're
                          // still affected by the current platform.
     [Test]
     [Category("Editor")]
@@ -2415,7 +2415,7 @@ partial class CoreTests
         Assert.That(InputSystem.s_Manager.m_StateChangeMonitors[0].listeners[0].control, Is.Null); // Won't get removed, just cleared.
     }
 
-#if UNITY_STANDALONE // CodeDom API not available in most players.
+#if false && UNITY_STANDALONE // CodeDom API not available in most players.
     [Test]
     [Category("Editor")]
     [TestCase("Mouse", typeof(Mouse))]
